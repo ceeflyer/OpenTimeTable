@@ -4,7 +4,9 @@ import net.ceeflyer.opentimetable.accessor.UserAccessor;
 import net.ceeflyer.opentimetable.enums.Privilege;
 import net.ceeflyer.opentimetable.obj.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService{
 	@Autowired private UserAccessor userAccessor;
 	
