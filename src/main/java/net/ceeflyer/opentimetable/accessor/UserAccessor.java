@@ -13,12 +13,15 @@ public interface UserAccessor{
 	@Select("select count(*) from User where user = #{user} and pass = password(#{pass});")
 	int inquiry(String user, String pass);
 	
+	@Select("select count(*) from User where user = #{user};")
+	void exists(String user);
+	
 	@Select("select * from User where user = #{user} and pass = password(#{pass});")
 	User select(String user, String pass);
 	
 	@Update("update User set user = #{user} and pass = password(#{pass}) and privilege = #{privilege} where user = #{user} and pass = password(#{pass});")
 	void update(User user);
 	
-	@Delete("delete from user where user = #{user} and pass = password(#{pass});")
-	void delete(String user, String pass);
+	@Delete("delete from user where user = #{user};")
+	void delete(String user);
 }

@@ -14,10 +14,12 @@ public class UserService{
 		return userAccessor.select(user, pass);
 	}
 	
-	public void addUser(String user, String pass, Privilege priv){
+	public boolean addUser(String user, String pass, Privilege priv){
 		User userObj = new User(user, pass, priv);
 		
 		userAccessor.add(userObj);
+		
+		return false;
 	}
 	
 	public void updateUser(String user, String pass, Privilege priv){
@@ -26,7 +28,10 @@ public class UserService{
 		userAccessor.update(userObj);
 	}
 	
-	public void deleteUser(String user, String pass){
-		
+	public boolean deleteUser(String user, String pass){
+		User userObj = userAccessor.select(user, pass);
+		if(userObj == null) return false;
+		userAccessor.delete(user);
+		return true;
 	}
 }

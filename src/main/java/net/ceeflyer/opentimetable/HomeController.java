@@ -17,13 +17,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET) public String home(Locale locale, Model model){
-		
+	@RequestMapping(value = "/", method = RequestMethod.GET) public String home(){
 		return "login";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(String name, String pass){
+	@RequestMapping(value = "/login", method = RequestMethod.POST) public String login(String name, String pass){
+		
 		return "home";
 	}
 }
