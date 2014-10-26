@@ -15,17 +15,21 @@ public class UserService{
 	}
 	
 	public boolean addUser(String user, String pass, Privilege priv){
+		if(userAccessor.exists(user) > 0) return false;
 		User userObj = new User(user, pass, priv);
-		
+
 		userAccessor.add(userObj);
 		
-		return false;
+		return true;
 	}
 	
-	public void updateUser(String user, String pass, Privilege priv){
+	public boolean updateUser(String user, String pass, Privilege priv){
+		if(userAccessor.exists(user) == 0) return false;
 		User userObj = new User(user, pass, priv);
 		
 		userAccessor.update(userObj);
+
+		return true;
 	}
 	
 	public boolean deleteUser(String user, String pass){

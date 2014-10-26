@@ -14,7 +14,7 @@ public interface UserAccessor{
 	int inquiry(String user, String pass);
 	
 	@Select("select count(*) from User where user = #{user};")
-	void exists(String user);
+	int exists(String user);
 	
 	@Select("select * from User where user = #{user} and pass = password(#{pass});")
 	User select(String user, String pass);

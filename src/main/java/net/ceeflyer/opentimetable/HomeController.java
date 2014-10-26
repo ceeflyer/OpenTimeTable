@@ -1,8 +1,11 @@
 package net.ceeflyer.opentimetable;
 
 import java.util.Locale;
+import net.ceeflyer.opentimetable.obj.User;
+import net.ceeflyer.opentimetable.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller public class HomeController{
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-
+	@Autowired private UserService userService;
+	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -21,7 +25,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 		return "login";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST) public String login(String name, String pass){
+	@RequestMapping(value = "/login", method = RequestMethod.POST) public String login(String name, String pass, Model model){
+		User userObj = userService.getUser(name, pass);
+		if(userObj == null){
+			
+		}
 		
 		return "home";
 	}
