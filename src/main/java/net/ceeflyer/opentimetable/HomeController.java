@@ -28,8 +28,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 	@RequestMapping(value = "/login", method = RequestMethod.POST) public String login(String name, String pass, Model model){
 		User userObj = userService.getUser(name, pass);
 		if(userObj == null){
-			
+			model.addAttribute("error", "Login failed.");
+			return "login";
 		}
+		
+		model.addAttribute("user", "Login failed.");
 		
 		return "home";
 	}
