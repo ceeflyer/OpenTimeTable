@@ -1,4 +1,4 @@
-<div class="md-">
+<div class="md-col-9">
 <form action="login" method="POST">
 	<div class="form-group">
 		<div class="panel panel-primary">
