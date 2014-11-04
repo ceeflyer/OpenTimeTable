@@ -1,5 +1,7 @@
 package net.ceeflyer.opentimetable.forms;
 
+import org.apache.commons.lang.StringUtils;
+
 public class AddUserForm implements Form{
 	private String userId;
 	private String nickname;
@@ -37,6 +39,10 @@ public class AddUserForm implements Form{
 
 	public void setPassVerify(String passVerify){
 		this.passVerify = passVerify;
+	}
+	
+	public boolean isPasswordVerify(){
+		return StringUtils.isNotEmpty(pass) && pass.equals(passVerify);
 	}
 
 	public int getPrivilege(){

@@ -10,7 +10,8 @@ public class UserController{
 		return "user/add";
 	}
 	
-	public String addUser(AddUserForm addUserForm, Model model){
+	public String addUserConfirm(AddUserForm addUserForm, Model model){
 		
+		return "user/add_confirm";
 	}
 }
