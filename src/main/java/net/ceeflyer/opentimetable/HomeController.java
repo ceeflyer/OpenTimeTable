@@ -1,6 +1,5 @@
 package net.ceeflyer.opentimetable;
 
-import java.util.Locale;
 import net.ceeflyer.opentimetable.obj.User;
 import net.ceeflyer.opentimetable.service.UserService;
 import org.slf4j.Logger;
