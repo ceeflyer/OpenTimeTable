@@ -1,5 +1,7 @@
 package net.ceeflyer.opentimetable.forms;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import org.apache.commons.lang.StringUtils;
 
 public class AddUserForm implements Form{
@@ -43,6 +45,12 @@ public class AddUserForm implements Form{
 	
 	public boolean isPasswordVerify(){
 		return StringUtils.isNotEmpty(pass) && pass.equals(passVerify);
+	}
+	
+	public void encodePass() throws NoSuchAlgorithmException{
+		if(pass != null){
+			MessageDigest.getInstance("MD5");
+		}
 	}
 
 	public int getPrivilege(){

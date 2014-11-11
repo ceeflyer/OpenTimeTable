@@ -5,15 +5,19 @@
 	<form role="form">
 		<div class="form-group">
 			<label for="userId">User ID</label>
-			<input type="text" class="form-control" id="userId" placeholder="">
+			<input type="text" class="form-control" id="userId" placeholder="User ID">
 		</div>
 		<div class="form-group">
 			<label for="userId">Nickname</label>
-			<input type="text" class="form-control" id="userId" placeholder="">
+			<input type="text" class="form-control" id="nickname" placeholder="Nickname">
 		</div>
 		<div class="form-group">
 			<label for="userId">Password</label>
-			<input type="text" class="form-control" id="userId" placeholder="">
+			<input type="password" class="form-control" id="pass" placeholder="">
+		</div>
+		<div class="form-group">
+			<label for="userId">Password verification</label>
+			<input type="password" class="form-control" id="passVerify" placeholder="">
 		</div>
 	</form>
 </div>
