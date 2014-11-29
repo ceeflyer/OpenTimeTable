@@ -17,11 +17,11 @@ public class LineController{
 	@RequestMapping()
 	public String listupLine(
 			@RequestParam(value = "from", defaultValue = "0") int from,
-			@RequestParam(value = "from", defaultValue = "50") int row,
+			@RequestParam(value = "row", defaultValue = "50") int row,
 			Model model){
-		List<Line> lines = lineAccessor.list(from, row);
-		model.addAttribute("", lines);
+		List<Line> lineList = lineAccessor.list(from, row);
+		model.addAttribute("itemList", lineList);
 		
-		return "";
+		return "line/list";
 	}
 }

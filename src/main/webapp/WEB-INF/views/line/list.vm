@@ -1,0 +1,27 @@
+路線一覧 <a href="add" class="btn btn-default">追加</a>
+<div class="col-md-12">
+	<table class="table">
+		<tr>
+			<th>路線名</th>
+			<th>会社</th>
+			<th>起点</th>
+			<th>終点</th>
+			<th>距離(<a href="#km">km</a> <a href="#mi">mi</a> <a href="#nm">nm</a>)</th>
+			<th>駅数</th>
+			<th>編集</th>
+			<th>削除</th>
+		</tr>
+		#for($item: $itemList)
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		#end
+	</table>
+</div>
