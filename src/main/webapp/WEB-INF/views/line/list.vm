@@ -1,4 +1,5 @@
-路線一覧 <a href="add" class="btn btn-default">追加</a>
+<h3>路線一覧</h3>
+<a href="add" class="btn btn-primary">追加</a>
 <div class="col-md-12">
 	<table class="table">
 		<tr>

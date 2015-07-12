@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Open Timetable</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Portal</a></li>
+                            <li><a href="#">Find</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> ceeflyer</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>  
+        </div>
+        <div class="body">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>路線名</th>
+                                <th>起点</th>
+                                <th>終点</th>
+                                <th>距離 <small><a href="#" onclick="chgToKm()">km</a> <a href="#" onclick="chgToMi()">mi</a></small></th>
+                                <th>コマンド</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="item-add" style="text-align: center;"><a href="#" onclick="addLine()"><span class="glyphicon glyphicon-plus"></span> 追加</a></td>
+                            </tr>
+                            <!-- Actual data -->
+							<tr>
+								<th>中央線 <a href="#"><span class="glyphicon glyphicon-pencil"></span></a></th>
+								<td>東京</td>
+								<td>名古屋</td>
+								<td>345.6</td>
+								<td>
+									<a href="#" class="btn btn-default">路線ページ <span class="glyphicon glyphicon-chevron-right"></span></a>
+									<a href="#"></a>
+								</td>
+							</tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+<!--            <p class="text-center">Copyright by Fujisaka Yusuke, 2015</p>-->
+        </div>
+    </body>
+</html>

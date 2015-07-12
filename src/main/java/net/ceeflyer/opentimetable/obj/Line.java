@@ -5,6 +5,7 @@ public class Line extends AbstractObject{
 	public String nickname;
 	public int companyId;
 	
+	
 	public String getName(){
 		return name;
 	}

@@ -23,6 +23,7 @@ http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 		up static resources in the ${webappRoot}/resources directory -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 
+	
 	<bean id="velocityConfigurer"
 		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
 		<property name="resourceLoaderPath" value="WEB-INF/views/" />
@@ -30,6 +31,8 @@ http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 			<props>
 				<prop key="input.encoding">UTF-8</prop>
 				<prop key="output.encoding">UTF-8</prop>
+				<prop key="userdirective">org.apache.velocity.runtime.directive.Extends,org.apache.velocity.runtime.directive.ExtendBlock
+				</prop>
 			</props>
 		</property>
 	</bean>

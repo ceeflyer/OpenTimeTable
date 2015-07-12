@@ -8,11 +8,14 @@
 </head>
 <body>
 <script src="resources/js/bootstrap.min.js"></script>
+<script lang="javascript">
+#block("js")#end
+</script>
 <div id="header">
-#parse("header.vm")
+#block("header")#end
 </div>
 <div id="main">
-$screen_content
+#block("body")#end
 </div>
 <div id="footer">
 #parse("footer.vm")
